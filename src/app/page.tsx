@@ -7,7 +7,7 @@ import {
     useQuery,
 } from "@tanstack/react-query";
 import { IoSearchSharp } from "react-icons/io5";
-import Image from "next/Image";
+import Image from "next/image";
 import { useState } from "react";
 import {
     Select,
