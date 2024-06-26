@@ -51,6 +51,9 @@ function DisplayDetail({ code }: { code: string }) {
     if (!data) {
         return null;
     }
+    if (data.status) {
+        return <div className={`w-full py-24 text-3xl font-bold ${getColor(theme, "text_navbar")}`}>Opps! No Such Country Code (CCA3)</div>;
+    }
     const {
         name,
         tld,
@@ -62,11 +65,8 @@ function DisplayDetail({ code }: { code: string }) {
         population,
         flags,
         borders,
-        status,
     } = data;
-    if (status === 400) {
-        return <p>Error</p>;
-    }
+    
     if (isFetching) {
         return <Skeleton />
     }
