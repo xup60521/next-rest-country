@@ -69,6 +69,29 @@ type Currencies = {
     };
 };
 
+export type Theme = "white" | "dark";
+type Elm = "bg_navbar" | "text_navbar" | "bg_content" | "text_content" | "bg_content_2" | "nav_border"
+
+export function getColor(theme: Theme, elm: Elm) {
+    if (theme === "white") {
+        if (elm === "bg_navbar") return "bg-white"
+        if (elm === "text_navbar") return "text-black"
+        if (elm === "bg_content") return "bg-c_very_light_gray"
+        if (elm === "text_content") return "text-black"
+        if (elm === "bg_content_2") return "bg-white"
+        if (elm === "nav_border") return "border-b-[1px] border-c_dark_gray"
+    }
+    if (theme === "dark") {
+        if (elm === "bg_navbar") return "bg-c_dark_blue"
+        if (elm === "text_navbar") return "text-white"
+        if (elm === "bg_content") return "bg-c_bg_dark_blue"
+        if (elm === "text_content") return "text-white"
+        if (elm === "bg_content_2") return "bg-white"
+        if (elm === "nav_border") return ""
+    }
+    return ""
+}
+
 export const cca3_to_name = [
     {
         "name": {

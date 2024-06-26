@@ -19,8 +19,8 @@ const config = {
     },
     extend: {
       colors: {
-        c_dark_blue: "hsl(209, 23%, 22%)",
-        c_bg_dark_blue: "hsl(207, 26%, 17%)",
+        c_dark_blue: "#2e3740",
+        c_bg_dark_blue: "#232c35",
         c_text_dark_blue: "hsl(200, 15%, 8%)",
         c_dark_gray: "hsl(0, 0%, 52%)",
         c_very_light_gray: "hsl(0, 0%, 98%)",
