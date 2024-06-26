@@ -17,6 +17,7 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { regions } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,8 @@ function Page() {
     });
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState("");
+    const router = useRouter()
+
     return (
         <div className="w-full flex-grow bg-c_very_light_gray text-black flex flex-col lg:px-32 pb-12 bg-">
             <div className="flex items-center justify-between pt-8 pb-12">
@@ -76,12 +79,13 @@ function Page() {
                     .map((item) => (
                         <div
                             key={item.name.common}
-                            className="flex flex-col overflow-hidden rounded-md bg-white" 
+                            className="flex flex-col overflow-hidden rounded-md bg-white transition hover:scale-105 cursor-pointer" 
+                            onMouseDown={()=>router.push(`/${item.cca3}`)}
                         >
                             <Image
                                 height={224}
                                 width={400}
-                                src={item.flags.png}
+                                src={item.flags.svg}
                                 alt={item.flags.alt}
                                 className="aspect-video w-full object-cover"
                             />
