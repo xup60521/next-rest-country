@@ -11,7 +11,7 @@ This is a solution to the [++Rock, Paper, Scissors challenge on Frontend Mentor+
         - [Implement theme change](#implement-theme-change)
         - [Fetch data](#fetch-data)
         - [Skeleton](#skeleton)
-- [Resources](#resources)
+    - [Resources](#resources)
 
 ## Overview
 
