@@ -82,7 +82,7 @@ function DisplayDetail({ code }: { code: string }) {
                 width={400}
                 src={flags.svg}
                 alt={flags.alt}
-                className=" object-cover lg:w-[min(40rem,35vw)] w-full flex-shrink-0 aspect-[3/2]"
+                className=" object-contain lg:w-[min(40rem,35vw)] w-full flex-shrink-0 aspect-[3/2]"
             />
             <div className="flex flex-col flex-grow lg:py-0 pb-24">
                 <h3 className="font-bold text-3xl">{name.common}</h3>
